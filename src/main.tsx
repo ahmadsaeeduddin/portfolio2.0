@@ -1,13 +1,13 @@
-// main.jsx
 import React from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
+import ReactDOM from "react-dom";
+import { HashRouter } from "react-router-dom";
 import App from "./App";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter basename="/portfolio2.0">
+    <HashRouter>
       <App />
-    </BrowserRouter>
-  </React.StrictMode>
+    </HashRouter>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
