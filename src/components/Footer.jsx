@@ -95,11 +95,11 @@ export function Footer() {
             <p className="text-muted-foreground text-sm">
               © {currentYear} Saeed Ud Din Ahmad. All rights reserved.
             </p>
-            {/* <div className="flex items-center text-muted-foreground text-sm">
-              <span>Built with</span>
+            <div className="flex items-center text-muted-foreground text-sm">
+              {/* <span>Built with</span> */}
               <Heart className="h-4 w-4 mx-1 text-red-500" />
-              <span>using React, JavaScript & Tailwind CSS</span>
-            </div> */}
+              {/* <span>using React, JavaScript & Tailwind CSS</span> */}
+            </div>
           </div>
         </div>
       </div>
