@@ -4,7 +4,5 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/portfolio2.0/',              // <<< IMPORTANT
-  resolve: { alias: { '@': path.resolve(__dirname, './src') } },
-  build: { sourcemap: true }
+  base: '/portfolio2.0/',
 })
