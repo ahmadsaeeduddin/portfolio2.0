@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Portfolio Design System - Dark theme with vibrant accents */
+
+@layer base {
+  :root {
+    /* Light theme colors */
+    --background: 0 199% 98%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 262 83% 58%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 262 83% 58%;
+
+    --radius: 0.75rem;
+
+    /* Custom portfolio colors */
+    --hero-gradient-start: 262 83% 58%;
+    --hero-gradient-end: 213 93% 67%;
+    --skill-card: 0 0% 100%;
+    --skill-card-hover: 262 83% 98%;
+    --project-card-1: 262 83% 58%;
+    --project-card-2: 213 93% 67%;
+    --project-card-3: 142 76% 36%;
+    --project-card-4: 38 92% 50%;
+    --project-card-5: 271 91% 65%;
+    --nav-bg: 0 0% 100% / 0.8;
+    --section-bg: 0 0% 99%;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark theme colors */
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 213 31% 91%;
+
+    --primary: 262 83% 58%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 215 28% 17%;
+    --secondary-foreground: 213 31% 91%;
+
+    --muted: 215 28% 17%;
+    --muted-foreground: 217 10% 65%;
+
+    --accent: 215 28% 17%;
+    --accent-foreground: 213 31% 91%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 28% 17%;
+    --input: 215 28% 17%;
+    --ring: 262 83% 58%;
+
+    /* Custom dark theme colors */
+    --hero-gradient-start: 262 83% 58%;
+    --hero-gradient-end: 213 93% 67%;
+    --skill-card: 215 28% 17%;
+    --skill-card-hover: 262 83% 20%;
+    --project-card-1: 262 83% 58%;
+    --project-card-2: 213 93% 67%;
+    --project-card-3: 142 76% 36%;
+    --project-card-4: 38 92% 50%;
+    --project-card-5: 271 91% 65%;
+    --nav-bg: 224 71% 4% / 0.8;
+    --section-bg: 215 28% 17%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground overflow-x-hidden;
+    /* Add gradient for light mode only */
+    background: linear-gradient(135deg, #ffb347 70%, #fffbe6 30%);
+  }
+
+  .dark body {
+    /* Keep dark mode as is, no gradient */
+    background: hsl(var(--background));
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .hero-gradient {
+    background: linear-gradient(135deg, hsl(var(--hero-gradient-start)), hsl(var(--hero-gradient-end)));
+  }
+  
+  .skill-card {
+    background: hsl(var(--skill-card));
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .skill-card:hover {
+    background: hsl(var(--skill-card-hover));
+    transform: translateY(-8px) scale(1.05);
+  }
+  
+  .project-card-1 { background: linear-gradient(135deg, hsl(var(--project-card-1)), hsl(var(--project-card-1)) / 0.8); }
+  .project-card-2 { background: linear-gradient(135deg, hsl(var(--project-card-2)), hsl(var(--project-card-2)) / 0.8); }
+  .project-card-3 { background: linear-gradient(135deg, hsl(var(--project-card-3)), hsl(var(--project-card-3)) / 0.8); }
+  .project-card-4 { background: linear-gradient(135deg, hsl(var(--project-card-4)), hsl(var(--project-card-4)) / 0.8); }
+  .project-card-5 { background: linear-gradient(135deg, hsl(var(--project-card-5)), hsl(var(--project-card-5)) / 0.8); }
+  
+  .nav-blur {
+    backdrop-filter: blur(16px);
+    background: hsl(var(--nav-bg));
+  }
+  
+  .floating-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .stagger-animation {
+    animation: slideInUp 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes slideInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+  border-radius: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.8);
+}
