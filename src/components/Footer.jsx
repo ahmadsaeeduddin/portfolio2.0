@@ -77,7 +77,7 @@ export function Footer() {
               </p>
               <p className="text-muted-foreground">
                 <span className="font-medium">Phone:</span><br />
-                <a href="tel:+923359274034" className="hover:text-primary transition-colors duration-200">
+                <a href="tel:+92335" className="hover:text-primary transition-colors duration-200">
                   +92 335 --------
                 </a>
               </p>

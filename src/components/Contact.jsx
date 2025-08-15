@@ -61,7 +61,7 @@ export function Contact() {
                     <div>
                       <p className="font-medium">Phone</p>
                       <a 
-                        href="tel:+923359274034"
+                        href="tel:+92335"
                         className="text-primary hover:underline"
                       >
                         +92 335 -------
